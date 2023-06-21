@@ -6,7 +6,7 @@
 - As strings are emitted by `observable$`, that's why the type is `Observable<string>`.
 - When the Subscription ends, the _Teardown logic_ runs. It provides a way to cancel ongoing processes that were initialized by the Observable.
 
-[![Run it in Stackblitz](https://img.shields.io/badge/StackBlitz-Run-blue?style=flat&logo=Stackblitz&logoColor=1389FD)](https://stackblitz.com/edit/rxjs-aaqebw?devToolsHeight=50&file=index.ts)
+<a href="https://stackblitz.com/edit/rxjs-aaqebw?devToolsHeight=50&file=index.ts" target="_blank"><img align="right" src="https://img.shields.io/badge/Run_with_Stackblitz-gray?logo=Stackblitz&logoColor=1389FD" alt="Run in Stackblitz"></a><br>
 ```typescript
 import { Observable, Subscription, Observer, Subscriber } from 'rxjs';
 
@@ -55,7 +55,7 @@ subscription3.unsubscribe();
 > **Note** :
 > When the Subscriptions ends, the notifications will not be passed to the Observer. This happens because of the intermediate Subscriber object created automatically by **RxJS**, which checks whether the Subscription is still active before passing the notifications to the Observer.
 
-[![Run it in Stackblitz](https://img.shields.io/badge/StackBlitz-Run-blue?style=flat&logo=Stackblitz&logoColor=1389FD)](https://stackblitz.com/edit/rxjs-wpyvpt?devToolsHeight=50&file=index.ts)
+<a href="https://stackblitz.com/edit/rxjs-wpyvpt?devToolsHeight=50&file=index.ts" target="_blank"><img align="right" src="https://img.shields.io/badge/Run_with_Stackblitz-gray?logo=Stackblitz&logoColor=1389FD" alt="Run with Stackblitz"></a><br>
 ```typescript
 const interval$: Observable<number> = new Observable<number>(
   (subscriber: Subscriber<number>) => {
@@ -79,3 +79,4 @@ setTimeout(() => {
 ```
 > **Warning** :
 > Here, if we don't keep the teardown logic, the code inside the Observable will keep on running even after we unsubscribed. Always cleanup the Observable after the Subcription ends to avoid left over code running and memory leaks.
+
