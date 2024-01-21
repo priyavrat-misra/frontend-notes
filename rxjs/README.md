@@ -78,5 +78,5 @@ setTimeout(() => {
 }, 5000);
 ```
 > **Warning** :
-> Here, if we don't keep the teardown logic, the code inside the Observable will keep on running even after we unsubscribed. Always cleanup the Observable after the Subcription ends to avoid left over code running and memory leaks.
+> Here, if we don't keep the teardown logic, the code inside the Observable will keep on running even after we unsubscribe. Always cleanup the Observable after the Subcription ends to avoid left over code running and memory leaks.
 
